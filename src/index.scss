@@ -1,0 +1,44 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  box-sizing: border-box;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --background: #242424;
+  --color: rgba(255, 255, 255, 0.87);
+  --slider-background: white;
+  --slider-thumb: #04aa6d;
+}
+
+*{
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+*[theme="dark"]{
+  --background: #242424;
+  --color: rgba(255, 255, 255, 0.87);
+  --slider-background: #464646;
+  --slider-thumb: #04aa6d;
+}
+
+*[theme="light"]{
+  --background: white;
+  --color: black;
+  --slider-background: #ECECEE;
+  --slider-thumb: #3785FF;
+}
+
+*[theme="gruvbox"]{
+  --background: #282828;
+  --color: #EBDBB2;
+  --slider-background: #928374;
+  --slider-thumb: #d79921;
+}  

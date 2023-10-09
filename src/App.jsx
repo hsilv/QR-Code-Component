@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+/* eslint-disable react/no-unknown-property */
+import { useContext } from "react";
+import "./App.module.scss";
+import ThemeContext from "./context/ThemeContext";
+import { availableThemes } from "./data/themes";
+import styles from './App.module.scss';
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const {theme, setTheme} = useContext(ThemeContext);
+
+  const changeTheme = (event) => {
+    const input = parseInt(event.target.value);
+    for(const idTheme in availableThemes){
+      if(input === parseInt(idTheme)){
+        setTheme(availableThemes[idTheme]);
+        break;
+      }
+    }
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+  <div className={styles.page} theme={theme}>
+    Color
+    <input className={styles.slider} type="range" min={1} max={3} onChange={changeTheme} defaultValue={1}/>
+  </div>
+  );
 }
 
-export default App
+export default App;
