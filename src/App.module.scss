@@ -42,3 +42,30 @@
   background: var(--slider-thumb);
   cursor: pointer;
 }
+
+.header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 20px;
+  padding-block: 10px;
+}
+
+.themeControl{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 15px;
+  span{
+    text-transform: capitalize;
+  }
+}
+
+.ThemeIcon{
+  fill: var(--theme-icon-fill);
+  transition: fill 0.1s ease;
+  width: 40px;
+  height: 40px;
+}

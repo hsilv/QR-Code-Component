@@ -14,6 +14,7 @@
   --color: rgba(255, 255, 255, 0.87);
   --slider-background: white;
   --slider-thumb: #04aa6d;
+  --theme-icon-fill: white;
 }
 
 *{
@@ -27,6 +28,7 @@
   --color: rgba(255, 255, 255, 0.87);
   --slider-background: #464646;
   --slider-thumb: #04aa6d;
+  --theme-icon-fill: #464646;
 }
 
 *[theme="light"]{
@@ -34,6 +36,7 @@
   --color: black;
   --slider-background: #ECECEE;
   --slider-thumb: #3785FF;
+  --theme-icon-fill: #cacaca;
 }
 
 *[theme="gruvbox"]{
@@ -41,4 +44,5 @@
   --color: #EBDBB2;
   --slider-background: #928374;
   --slider-thumb: #d79921;
+  --theme-icon-fill: #928374;
 }  
