@@ -17,32 +17,46 @@
   --theme-icon-fill: white;
 }
 
-*{
+* {
   border: 0;
   padding: 0;
   margin: 0;
 }
 
-*[theme="dark"]{
+*[theme="dark"] {
   --background: #242424;
   --color: rgba(255, 255, 255, 0.87);
   --slider-background: #464646;
   --slider-thumb: #04aa6d;
   --theme-icon-fill: #464646;
+  --qr-background: #c6cdd5;
+  --qr-foreground: #21262d;
+  --form-color: #464646;
 }
 
-*[theme="light"]{
+*[theme="light"] {
   --background: white;
-  --color: black;
-  --slider-background: #ECECEE;
-  --slider-thumb: #3785FF;
+  --color: rgb(58, 58, 58);
+  --slider-background: #ececee;
+  --slider-thumb: #3785ff;
   --theme-icon-fill: #cacaca;
+  --qr-background: #282526;
+  --qr-foreground: white;
+  --form-color: #cacaca;
 }
 
-*[theme="gruvbox"]{
+*[theme="gruvbox"] {
   --background: #282828;
-  --color: #EBDBB2;
+  --color: #ebdbb2;
   --slider-background: #928374;
   --slider-thumb: #d79921;
   --theme-icon-fill: #928374;
-}  
+  --qr-background: #ebdbb2;
+  --qr-foreground: #32302f;
+  --form-color: #504945;
+}
+
+* {
+  box-sizing: border-box;
+  --page-transition: 0.8s;
+}

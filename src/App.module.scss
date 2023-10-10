@@ -5,11 +5,11 @@
   background-color: var(--background);
   width: 100vw;
   height: 100vh;
-  max-width: 100vw;
-  max-height: 100vh;
-  min-width: 100vw;
-  min-height: 100vh;
-  transition: background-color 0.4s ease, color 0.4s ease;
+  transition: background-color var(--page-transition) ease,
+    color var(--page-transition) ease;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
 }
 
 .slider {
@@ -18,7 +18,7 @@
   min-width: 150px;
   height: 12px;
   border-radius: 10px;
-  transition: background 0.4s ease;
+  transition: background var(--page-transition) ease;
   background: var(--slider-background);
 }
 
@@ -29,7 +29,8 @@
   aspect-ratio: 1;
   border-radius: 50%;
   border: 4px solid var(--background);
-  transition: border 0.4s ease, background 0.4s ease;
+  transition: border var(--page-transition) ease,
+    background var(--page-transition) ease;
   background: var(--slider-thumb);
   cursor: pointer;
 }
@@ -38,34 +39,205 @@
   height: 22px;
   border-radius: 50%;
   aspect-ratio: 1;
-  transition: border 0.4s ease, background 0.4s ease;
+  transition: border var(--page-transition) ease,
+    background var(--page-transition) ease;
   background: var(--slider-thumb);
   cursor: pointer;
 }
 
-.header{
+.header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding-inline: 20px;
   padding-block: 10px;
+  flex-wrap: wrap;
+  h1 {
+    flex-grow: 11;
+    text-align: center;
+  }
+  border-bottom: 0.5px solid var(--color);
 }
 
-.themeControl{
+.themeControl {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   column-gap: 15px;
-  span{
+  align-self: flex-start;
+  span {
     text-transform: capitalize;
+  }
+  margin-left: 50px;
+  flex-grow: 1;
+}
+
+.ThemeIcon {
+  fill: var(--theme-icon-fill);
+  transition: fill calc(var(--page-transition) * 1.7) ease;
+  width: 40px;
+  height: 40px;
+}
+
+.footer {
+  margin-block: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.body {
+  height: 100%;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.QRContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+
+.QRDetails {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  width: 60%;
+}
+
+.formCard {
+  display: flex;
+  flex-direction: column;
+  color: var(--color);
+  transition: background-color var(--page-transition) ease,
+    color var(--page-transition) ease;
+  background-color: var(--form-color);
+  border-radius: 10px;
+  width: 60%;
+  padding-block: 15px;
+  padding-inline: 20px;
+  box-shadow: 0px 10px 0px 0px gray;
+}
+
+.QRCard {
+  width: 70%;
+  aspect-ratio: 1;
+  background-color: var(--qr-background);
+  border-radius: 20px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  canvas {
+    width: 90% !important;
+    height: 90% !important;
+    border-radius: 20px;
   }
 }
 
-.ThemeIcon{
-  fill: var(--theme-icon-fill);
-  transition: fill 0.1s ease;
-  width: 40px;
-  height: 40px;
+.textInput {
+  transition: border-bottom 0.4s ease;
+  width: 100%;
+  color: inherit;
+  height: 30px;
+  background-color: transparent;
+  outline: none;
+  font-size: 1em;
+  border-bottom: 1px solid rgb(99, 99, 99);
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.textInput:focus {
+  border-bottom: 1px solid gray;
+}
+
+.formLabels {
+  font-weight: bold;
+  text-align: start;
+}
+
+.submitButton {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  padding-inline: 20px;
+  padding-block: 10px;
+  font-weight: bold;
+  font-size: 1em;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: auto;
+  transition: width 0.4s ease, padding-right 0.4s ease;
+}
+
+.submitButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.submitButton span:after {
+  content: ' >>';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  right: -2ch;
+  transition: right 0.4s ease, opacity 0.4s ease;
+}
+
+
+.submitButton:hover span:after {
+  display: inline-block;
+  right: -5ch;
+  opacity: 1;
+}
+
+.submitButton:hover {
+  padding-right: 7ch;
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .themeControl {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    align-self: auto;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .QRContainer {
+    margin-block: 50px;
+    width: 100%;
+  }
+
+  .QRDetails {
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+    margin-bottom: 10px;
+  }
 }

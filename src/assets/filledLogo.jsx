@@ -1,0 +1,63 @@
+/* eslint-disable react/no-unknown-property */
+import PropTypes from "prop-types";
+
+function LogoSVG({ className }) {
+  return (
+    <svg className={className}
+      version="1.1"
+      id="svg1"
+      width="790"
+      height="864"
+      viewBox="0 0 790 864"
+      sodipodi:docname="filledLogo.svg"
+      inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+      xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+      xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:svg="http://www.w3.org/2000/svg"
+    >
+      <defs id="defs1" />
+      <sodipodi:namedview
+        id="namedview1"
+        pagecolor="#ffffff"
+        bordercolor="#000000"
+        borderopacity="0.25"
+        inkscape:showpageshadow="2"
+        inkscape:pageopacity="0.0"
+        inkscape:pagecheckerboard="0"
+        inkscape:deskcolor="#d1d1d1"
+        inkscape:zoom="0.43621286"
+        inkscape:cx="934.17694"
+        inkscape:cy="198.29768"
+        inkscape:window-width="1444"
+        inkscape:window-height="734"
+        inkscape:window-x="1970"
+        inkscape:window-y="85"
+        inkscape:window-maximized="0"
+        inkscape:current-layer="g1"
+      />
+      <g inkscape:groupmode="layer" inkscape:label="Image" id="g1">
+        <path
+          style="fill:#000000;stroke-width:0.997428"
+          d="M 206.8282,442.75856 V 176.29783 c 0,0 15.75534,-136.365168 437.99255,-173.9831676 C 1067.058,-35.303349 430.55086,590.72969 430.55086,590.72969 c 0,0 -96.10613,92.79456 -160.70214,106.90131 -64.59602,14.10675 -59.8695,-57.99437 -58.294,-53.29214 1.57552,4.70224 -4.72652,-201.5803 -4.72652,-201.5803 z"
+          id="path1"
+        />
+        <path
+          style="fill:#000000;stroke-width:0.997428"
+          d="m 601.40005,441.40647 -11.3744,266.22034 c 0,0 -21.56213,135.57649 -445.02421,155.32128 -423.46215,19.74484 239.19424,-578.83139 239.19424,-578.83139 0,0 99.98054,-88.6504 165.12045,-100.01527 65.13992,-11.36487 57.33988,60.47147 55.96653,55.70692 -1.37338,-4.76454 -3.88261,201.59812 -3.88261,201.59812 z"
+          id="path1-3"
+        />
+      </g>
+    </svg>
+  );
+}
+
+LogoSVG.propTypes = {
+  className: PropTypes.string,
+};
+
+LogoSVG.defaultProps = {
+  className: "",
+};
+
+export default LogoSVG;
