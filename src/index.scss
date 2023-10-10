@@ -12,9 +12,17 @@
 
   --background: #242424;
   --color: rgba(255, 255, 255, 0.87);
-  --slider-background: white;
+  --slider-background: #464646;
   --slider-thumb: #04aa6d;
-  --theme-icon-fill: white;
+  --theme-icon-fill: #464646;
+  --qr-background: #c6cdd5;
+  --qr-foreground: #21262d;
+  --form-color: #464646;
+  --form-shadow: gray;
+  --non-active-input: rgb(99, 99, 99);
+  --active-input: gray;
+  --send-button-color: #04aa6d;
+  --send-button-color-text: #FFFFFF;
 }
 
 * {
@@ -32,6 +40,12 @@
   --qr-background: #c6cdd5;
   --qr-foreground: #21262d;
   --form-color: #464646;
+  --form-shadow: #383838;
+  --non-active-input: rgb(134, 134, 134);
+  --active-input: rgb(196, 196, 196);
+  --send-button-color: #04aa6d;
+  --input-color: var(--color);
+  --send-button-color-text: #FFFFFF;
 }
 
 *[theme="light"] {
@@ -42,7 +56,13 @@
   --theme-icon-fill: #cacaca;
   --qr-background: #282526;
   --qr-foreground: white;
-  --form-color: #cacaca;
+  --form-color: #f1f1f1; 
+  --form-shadow: rgb(206, 206, 206);
+  --non-active-input: rgb(207, 207, 207);
+  --active-input: rgb(150, 150, 150);
+  --input-color: var(--color);
+  --send-button-color: #3785ff;
+  --send-button-color-text: #FFFFFF;
 }
 
 *[theme="gruvbox"] {
@@ -53,7 +73,13 @@
   --theme-icon-fill: #928374;
   --qr-background: #ebdbb2;
   --qr-foreground: #32302f;
-  --form-color: #504945;
+  --form-color: #665c54;
+  --form-shadow: #3c3836;
+  --input-color: var(--color);
+  --non-active-input: #a89984;
+  --active-input: #ebdbb2;
+  --send-button-color: #d65d0e;
+  --send-button-color-text: #FFFFFF;
 }
 
 * {

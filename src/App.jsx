@@ -46,7 +46,7 @@ function App() {
   return (
     <div className={styles.page} theme={theme} ref={cssVarsRefs}>
       <header className={styles.header}>
-        <h1>QR Code Generator lore</h1>
+        <h1>QR Code Generator</h1>
         <div className={styles.themeControl}>
           <span>{theme}</span>
           <ThemeIcon className={styles.ThemeIcon} />
@@ -86,11 +86,10 @@ function App() {
         <div className={styles.QRDetails}>
           <form onSubmit={handleSubmit} className={styles.formCard}>
             <span className={`${styles.formTip} ${submited ? styles.showTip : ''}`}>
-              Si quieres descargar tu QR puedes dar clic derecho sobre el QR y
-              dar clic sobre &quot;Guardar Como&quot;
+              If you want to download the QR, right click the QR Code then click &quot;Save As&quot;
             </span>
             <label htmlFor="pageURL" className={styles.formLabels}>
-              Ingresa tu texto:
+              Enter your text:
             </label>
             <input
               type="text"
@@ -105,7 +104,7 @@ function App() {
               id="generar"
               className={styles.submitButton}
             >
-              <span>Enviar</span>
+              <span>Generate</span>
             </button>
           </form>
         </div>
