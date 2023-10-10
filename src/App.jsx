@@ -11,7 +11,8 @@ import { useState } from "react";
 
 function App() {
   const { theme, setTheme } = useContext(ThemeContext);
-  const [ url, setURL ] = useState("http://silva.com");
+  const [url, setURL] = useState("http://silva.com");
+  const [submited, setSubmited] = useState(false);
   const [QRColor, setQRColor] = useState({
     fgColor: "black",
     bgColor: "white",
@@ -31,6 +32,7 @@ function App() {
   const handleSubmit = (event) => {
     event.preventDefault();
     setURL(event.target.pageURL.value);
+    setSubmited(true);
   };
 
   useEffect(() => {
@@ -83,6 +85,10 @@ function App() {
         </div>
         <div className={styles.QRDetails}>
           <form onSubmit={handleSubmit} className={styles.formCard}>
+            <span className={`${styles.formTip} ${submited ? styles.showTip : ''}`}>
+              Si quieres descargar tu QR puedes dar clic derecho sobre el QR y
+              dar clic sobre &quot;Guardar Como&quot;
+            </span>
             <label htmlFor="pageURL" className={styles.formLabels}>
               Ingresa tu texto:
             </label>
